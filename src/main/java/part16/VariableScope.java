@@ -17,5 +17,9 @@ package part16;
 //    in THIS file AND in DiceRoller.java, saying in YOUR OWN WORDS what that line does.
 
 public class VariableScope {
-
+    //psvm start of the program
+    public static void main(String[] args) {
+        // we new DiceRoller to diceroller
+        DiceRoller diceRoller = new DiceRoller();
+    }
 }
