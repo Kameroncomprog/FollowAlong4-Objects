@@ -11,5 +11,28 @@ package part15;
 // Stretch B: your Phone class goes in THIS file, BELOW the last } of class Stretch.
 
 public class Stretch {
+    public static void main(String[] args) {
+        Car a = new Car();
+        Car b = new Car();
+        b.color = "red";
+        System.out.println(a.color);
+        System.out.println(b.color);
+        a = b;
+        System.out.println(a.color);
+        final double TAX_RATE = 0.06;
+        System.out.println(a.price * TAX_RATE);
+        Phone phone = new Phone();
+        phone.charge();
+        phone.charge();
+        System.out.println(phone.brand + " battery: " + phone.battery);
+    }
+     static class Phone {
+        String brand = "Apple";
+        int battery = 80;
 
+        void charge() {
+            battery = battery + 10;
+            System.out.println("Charging... " + battery + "%");
+        }
+    }
 }
