@@ -16,18 +16,29 @@ package part19;
 
 public class StaticKeyword {
     public static void main(String[] args) {
+        // Prints the initial value of the static variable numberOfFriends before any objects are created (outputs 0)
         System.out.println(Friend.numberOfFriends);
+        // Instantiates a new Friend object with the name "SpongeBob", which triggers the constructor and increments numberOfFriends
         Friend friend1 = new Friend("SpongeBob");
+        // Prints the updated count of friends after creating the first friend (outputs 1)
         System.out.println(Friend.numberOfFriends);
+        // Instantiates a second Friend object named "Patrick", incrementing the shared static counter
         Friend friend2 = new Friend("Patrick");
+        // Prints the updated count of friends after creating the second friend (outputs 2)
         System.out.println(Friend.numberOfFriends);
-
+        // Instantiates a third Friend object named "Squidward", incrementing the static counter again
         Friend friend3 = new Friend("Squidward");
+        // Prints the static variable numberOfFriends using the class name (outputs 3)
         System.out.println(Friend.numberOfFriends);
+        // Prints the static variable numberOfFriends using an instance reference (discouraged style, but valid in Java; outputs 3)
         System.out.println(friend1.numberOfFriends);
+        // Invokes the static method displayFriends() to print or handle all friend instances created up to this point
         Friend.displayFriends();
+        // Instantiates a fourth Friend object named "Sandy", incrementing the static counter to 4
         Friend friend4 = new Friend("Sandy");
+        // Invokes displayFriends() again to show the updated collection including Sandy
         Friend.displayFriends();
+        // Uses Java's built-in Math class static method round() to round 3.14 to the nearest integer (outputs 3)
         System.out.println(Math.round(3.14));
     }
 }
