@@ -11,5 +11,35 @@ package part17;
 // There is no main method here yet. Typing it is part of the stretch.
 
 public class Stretch {
+    public static void main(String[] args) {
 
-}
+        part17.Pizza a = new part17.Pizza("flatbread", "pesto");
+        part17.Pizza b = new part17.Pizza("thin crust", "tomato", "cheddar", "olives");
+        part17.Pizza c = new part17.Pizza();
+        // system prints red
+        System.out.println(a.cheese);
+        // prints olives
+        System.out.println(b.topping);
+        //prints null
+        System.out.println(c.bread);
+        Car car = new Car();
+        // system prints Ford
+        System.out.println(car);
+        part17.Pizza mine = new part17.Pizza("thin crust", "tomato", "cheddar", "olives");
+        System.out.println(mine);
+        Car other = new Car("Toyota", "Corolla", "blue", 2018);
+        System.out.println(other);
+
+
+        //B1.
+        String make = "Honda";
+        String model = "Civic";
+        int year = 2019;
+        String description = year + " " + make + " " + model;
+        System.out.println(description);
+    }
+
+    //B2.
+
+    }
+
